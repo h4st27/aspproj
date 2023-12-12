@@ -1,0 +1,68 @@
+﻿@model ShowOrdersViewModel
+
+<div class="container">
+    <h1>Products</h1>
+
+    <form action="ShowOrders">
+        <div class="form-group">
+            <label for="viewSelect">View:</label>
+            <select asp-for=ShowStyle class="form-control" id="viewSelect">
+                <option value="@ShowStyles.List">List View</option>
+                <option value="@ShowStyles.Table">Table View</option>
+            </select>
+
+        </div>
+        <button style="width:100%;margin-top: 15px" type="submit" class="btn btn-primary btn-block">Change view</button>
+    </form>
+    @if (Model.ShowStyle == ShowStyles.List)
+    {
+        <div id="productsList" class="list-view">
+            <ul class="list-group">
+                @foreach (var product in Model.Orders)
+                {
+                    <form method="post" action="DeleteOrder">
+                    <input type="hidden" name="showStyle" value="@Model.ShowStyle" />
+                    <input type="hidden" name="Id" value="@product.Id" />
+                    <li class="list-group-item">
+                            @product.Id. @product.Name - @product.Price$ (@product.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss")) 
+                            <button style="background:red" type="submit" class="btn btn-primary btn-block">X</button>
+                    </li>
+                    </form>
+                }
+            </ul>
+        </div>
+    }
+    else
+    {
+    <div id="productsTable" class="table-view">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Created At</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model.Orders)
+                {
+                    <form action="DeleteOrder">
+                            <input type="hidden" name="showStyle" value="@Model.ShowStyle" />
+                            <input type="hidden" name="Id" value="@product.Id" />
+                    <tr>
+                            <th>@product.Id</th>
+                            <th>@product.Name</th>
+                            <th>@product.Price$</th>
+                            <th>@product.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss")</th>
+                            <th>
+                                <button style="background:red" type="submit" class="btn btn-primary btn-block">X</button>
+                            </th>
+                    </tr>
+                    </form>
+                }
+            </tbody>
+        </table>
+    </div>
+    }
+</div>
