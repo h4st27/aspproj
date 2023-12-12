@@ -1,4 +1,4 @@
-﻿namespace MyApp.services.CalcService
+﻿namespace MyApp.interfaces
 {
     public interface ICalcService
     {
