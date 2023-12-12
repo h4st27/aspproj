@@ -1,43 +1,45 @@
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder();
 var app = builder.Build();
+builder.
+    Configuration.
+    AddJsonFile("configs/apple.json").
+    AddXmlFile("configs/microsoft.xml").
+    AddIniFile("configs/google.ini").
+    AddJsonFile("configs/about.json").
+    AddInMemoryCollection(new Dictionary<string, string>{
+        {"password", "2204"},
+    });
 
-var myCompany = new Company
+app.Map("/", (IConfiguration appConfig) =>
 {
-    Name = "TrackEnsure",
-    StaffAmount = 1502
-};
-//Get endpoint
-app.MapGet("/", () =>
-{
-    var companyInfo = "My company name is " + myCompany.Name + ". It's staff counts about " + myCompany.StaffAmount + " workers";
-    return companyInfo;
-});
-//Get endpoint
-app.MapGet("/randint", () =>
-{
-    var randomizer = new Random();
-    var randomNumber = randomizer.Next(0, 101);
+    var name = "";
+    var employees = 0;
+    IConfigurationSection copmanyConfig = appConfig.GetSection("CompanyInfo");
+    foreach (var section in copmanyConfig.GetChildren())
+    {
+        var currentName = section.Key;
+        var currentEmployees = int.Parse(section.GetSection("Employees").Value);
+        if (currentEmployees > employees)
+        {
+            name = currentName;
+            employees = currentEmployees;
+        }
+    }
+    return $"Company with the most enumerable staff is {name} and it counts about {employees} employees";
 
-    return "Your random number is " + randomNumber + ". Congrats!!!";
 });
-//Middleware
-app.Use(async (context, next) =>
+
+app.Map("/about", (IConfiguration appConfig) =>
 {
-    var password = context.Request.Query["password"];
-    if (password == "2204")
-    {
-        await next();
-    }
-    else
-    {
-        context.Response.StatusCode = 401;
-        await context.Response.WriteAsync("Invalid password");
-    }
+    IConfigurationSection user = appConfig.GetSection("User");
+    var name = user.GetSection("Name").Value; ;
+    var surname = user.GetSection("Surname").Value; ;
+    var address = user.GetSection("Address").Value; ;
+    var phoneNumber = user.GetSection("Phone number").Value;
+    var age = user.GetSection("Age").Value; ;
+
+    return $"I am {name} {surname}. I am {age} years old. You can call {phoneNumber} or visit me on {address}. Thank you for your attention!!!";
+
 });
+
 app.Run();
-
-public class Company
-{
-    public string? Name { get; set; }
-    public int StaffAmount { get; set; }
-}
