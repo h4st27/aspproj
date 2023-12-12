@@ -1,0 +1,37 @@
+﻿@using MyApp.ViewModels
+@model UserView
+@{
+    Layout = null;
+}
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration - MyApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyApp.styles.css" asp-append-version="true" />
+</head>
+<body style="width:80%; margin:15px auto">
+    <form method="post" asp-controller="Home" asp-action="Register">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" id="Name" name="Name" asp-for="Name" required>
+    </div>
+    <div class="form-group">
+        <label for="Password">Password</label>
+            <input type="password" class="form-control" id="Password" name="Password" asp-for="Password" required>
+    </div>
+    <div class="form-group">
+        <label for="Age">Age</label>
+            <input type="number" class="form-control" id="Age" name="Age" asp-for="Age" required>
+    </div>
+    <div>
+        <button style="width:100%" type="submit" class="btn btn-primary mx-auto">Register</button>
+    </div>
+</form>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
