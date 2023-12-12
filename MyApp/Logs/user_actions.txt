@@ -1,0 +1,17 @@
+Action: MyApp.Controllers.HomeController.Index (MyApp), Time: 2023-11-14 19:03:08
+Action: MyApp.Controllers.HomeController.AddOrder (MyApp), Time: 2023-11-14 19:03:09
+Action: MyApp.Controllers.HomeController.ShowOrders (MyApp), Time: 2023-11-14 19:03:10
+Action: MyApp.Controllers.HomeController.GetWeather (MyApp), Time: 2023-11-14 19:03:10
+Action: MyApp.Controllers.HomeController.Consultion (MyApp), Time: 2023-11-14 19:03:11
+Action: MyApp.Controllers.HomeController.Registration (MyApp), Time: 2023-11-14 19:03:13
+Action: MyApp.Controllers.HomeController.AddOrder (MyApp), Time: 2023-11-14 19:03:17
+Action: MyApp.Controllers.HomeController.PostOrder (MyApp), Time: 2023-11-14 19:03:24
+Action: MyApp.Controllers.HomeController.Registration (MyApp), Time: 2023-11-14 19:03:45
+Action: MyApp.Controllers.HomeController.Register (MyApp), Time: 2023-11-14 19:04:09
+Action: MyApp.Controllers.HomeController.Index (MyApp), Time: 2023-11-14 19:04:09
+Action: MyApp.Controllers.HomeController.Registration (MyApp), Time: 2023-11-14 19:04:10
+Action: MyApp.Controllers.HomeController.Register (MyApp), Time: 2023-11-14 19:04:43
+Action: MyApp.Controllers.HomeController.Index (MyApp), Time: 2023-11-14 19:04:43
+Action: MyApp.Controllers.HomeController.Registration (MyApp), Time: 2023-11-14 19:04:44
+Action: MyApp.Controllers.HomeController.Register (MyApp), Time: 2023-11-14 19:05:07
+Action: MyApp.Controllers.HomeController.Index (MyApp), Time: 2023-11-14 19:05:07

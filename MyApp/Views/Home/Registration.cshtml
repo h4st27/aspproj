@@ -1,0 +1,26 @@
+﻿@model User
+
+<form method="post" asp-controller="Home" asp-action="Register" class="form-signin">
+    <h2 class="form-signin-heading">Registration</h2>
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="UserName" class="control-label">Username</label>
+        <input asp-for="UserName" type="text" class="form-control" required/>
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" type="email" class="form-control" required />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password" class="control-label"></label>
+        <input asp-for="Password" type="password" minlength="6" class="form-control" required />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <button style="width:100%;margin-top: 15px" type="submit" class="btn btn-primary" id="confirmButton">Confirm</button>
+</form>

@@ -1,9 +1,9 @@
-﻿@model ConsultationRegistrationModel
+﻿@model ConsultationRegistration
 <div class="container mt-5">
-    <h2>Форма реєстрації на консультацію</h2>
+    <h2>Consultation form</h2>
     <form method="post" asp-controller="Home" asp-action="RegisterConsultation">
         <div class="form-group">
-            <label for="fullName">Ім'я та прізвище:</label>
+            <label for="fullName">Name and surname:</label>
             <input type="text" class="form-control" id="fullName" name="fullName" value="@Model.FullName" required>
         </div>
 
@@ -13,20 +13,20 @@
         </div>
 
         <div class="form-group">
-            <label for="consultationDate">Бажана дата консультації:</label>
+            <label for="consultationDate">Date of consultation:</label>
             <input type="date" class="form-control" id="consultationDate" name="consultationDate" value="@Model.ConsultationDate" required>
         </div>
         <div class="form-group">
-            <label for="selectedProduct">Вибір продукту:</label>
+            <label for="selectedProduct">Subject:</label>
             <select class="form-control" id="selectedProduct" name="Subject" asp-for="Subject" required>
                 <option value="JavaScript">JavaScript</option>
                 <option value="C#">C#</option>
                 <option value="Java">Java</option>
                 <option value="Python">Python</option>
-                <option value="Основи">Основи</option>
+                <option value="Основи">Basics</option>
             </select>
         </div>
         <div asp-validation-summary="All" class="text-danger"></div>
-        <button style="width:100%;margin-top: 15px" type="submit" class="btn btn-primary">Зареєструватися на консультацію</button>
+        <button style="width:100%;margin-top: 15px" type="submit" class="btn btn-primary">Confirm</button>
     </form>
 </div>

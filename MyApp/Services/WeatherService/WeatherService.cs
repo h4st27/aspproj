@@ -20,7 +20,6 @@ namespace MyApp.Services.WeatherService
             try
             {
                 HttpResponseMessage response = await _httpClient.GetAsync($"https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={_configuration.GetSection("ApiKey").Value}");
-                await Console.Out.WriteLineAsync($"fetched data : {response}");
                 if (response.IsSuccessStatusCode)
                 {
                     var weatherData = await response.Content.ReadFromJsonAsync<WeatherData>();

@@ -2,23 +2,23 @@
 
 namespace MyApp.Models
 {
-    public class ConsultationRegistrationModel
+    public class ConsultationRegistration
     {
-        [Required(ErrorMessage = "Поле 'Ім'я та прізвище' є обов'язковим.")]
+        [Required(ErrorMessage = "Username is required.")]
         public string FullName { get; set; }
 
-        [Required(ErrorMessage = "Поле 'Email' є обов'язковим.")]
-        [EmailAddress(ErrorMessage = "Введіть коректний Email.")]
+        [Required(ErrorMessage = "Email is required.")]
+        [EmailAddress(ErrorMessage = "Wrong Email.")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Поле 'Бажана дата консультації' є обов'язковим.")]
-        [DataType(DataType.Date, ErrorMessage = "Введіть коректну дату.")]
-        [FutureDate(ErrorMessage = "Дата консультації має бути в майбутньому.")]
-        [NotWeekend(ErrorMessage = "Дата консультації не може бути вихідним днем.")]
+        [Required(ErrorMessage = "Date is required.")]
+        [DataType(DataType.Date, ErrorMessage = "Date is wrong.")]
+        [FutureDate(ErrorMessage = "Date has to be in future.")]
+        [NotWeekend(ErrorMessage = "Date mustn`t be on weekend.")]
         public DateTime ConsultationDate { get; set; }
 
-        [NotOnMonday(ErrorMessage = "Subject 'base' cannot be scheduled on a Monday.")]
-        [Required(ErrorMessage = "Поле 'Вибір продукту' є обов'язковим.")]
+        [NotOnMonday(ErrorMessage = "Subject 'basics' cannot be scheduled on a Monday.")]
+        [Required(ErrorMessage = "Subject is required.")]
         public string Subject { get; set; }
     }
 
@@ -26,7 +26,7 @@ namespace MyApp.Models
     {
         public FutureDateAttribute()
         {
-            ErrorMessage = "Дата повинна бути у майбутньому";
+            ErrorMessage = "Date has to be in future.";
         }
         public override bool IsValid(object value)
         {
@@ -39,7 +39,7 @@ namespace MyApp.Models
     {
         public NotWeekendAttribute()
         {
-            ErrorMessage = "Дата не може співпадати із вихідним днем";
+            ErrorMessage = "Date mustn`t be on weekend.";
         }
 
         public override bool IsValid(object value)
@@ -57,7 +57,7 @@ namespace MyApp.Models
 
             if (subjectProperty == null || consultationDateProperty == null)
             {
-                return new ValidationResult("Пропущнені обов'язкові поля");
+                return new ValidationResult("Wrong inputs");
             }
 
             var subjectValue = (string)subjectProperty.GetValue(validationContext.ObjectInstance, null);
@@ -65,7 +65,7 @@ namespace MyApp.Models
 
             if (subjectValue?.ToLower() == "основи" && consultationDateValue.DayOfWeek == DayOfWeek.Monday)
             {
-                return new ValidationResult("Предмет основи не може бути проконсультований у понеділок");
+                return new ValidationResult("Basics cannot be consulted on monday");
             }
 
             return ValidationResult.Success;

@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿
 using Microsoft.AspNetCore.Mvc;
+using MyApp.Filters;
 using MyApp.Models;
 using MyApp.ViewModels.HomeViewModles;
 using System.Globalization;
@@ -8,6 +9,8 @@ using System.Web;
 
 namespace MyApp.Controllers
 {
+    [LogActionFilter]
+    [LogUniqueUsersFilter]
     public class HomeController : Controller
     {
         private static readonly List<Order> _orders= new ();
@@ -18,11 +21,10 @@ namespace MyApp.Controllers
         }
         public ActionResult Consultion()
         {
-            return View(new ConsultationRegistrationModel());
+            return View(new ConsultationRegistration());
         }
         [HttpPost]
-        [HttpPost]
-        public IActionResult RegisterConsultation(ConsultationRegistrationModel model)
+        public IActionResult RegisterConsultation(ConsultationRegistration model)
         {
             if (ModelState.IsValid)
             {
@@ -41,8 +43,6 @@ namespace MyApp.Controllers
         {
             if (Double.TryParse(lat, NumberStyles.Float, CultureInfo.InvariantCulture, out double numberLat) && Double.TryParse(lon, NumberStyles.Float, CultureInfo.InvariantCulture, out double numberLon))
             {
-                Console.WriteLine(numberLat);
-                Console.WriteLine(numberLon);
                 _coord.lat=numberLat;
                 _coord.lon=numberLon;
             }
@@ -55,7 +55,6 @@ namespace MyApp.Controllers
         [HttpGet]
         public ActionResult GetWeather()
         {
-            Console.WriteLine(_coord);
             return View(_coord);
         }
         [HttpGet]
@@ -79,15 +78,33 @@ namespace MyApp.Controllers
         }
         public ActionResult ShowOrders(ShowStyles showStyle)
         {
-            Console.WriteLine(showStyle);
             ShowOrdersViewModel showOrdesrViewModel = new(_orders, showStyle);
             return View(showOrdesrViewModel);
         }
         public ActionResult DeleteOrder(int Id, ShowStyles showStyle)
         {
-            Console.WriteLine(showStyle);
             _orders.RemoveAll(x => x.Id == Id);
             return RedirectToAction("ShowOrders", new { showStyle });
+        }
+        public IActionResult Registration()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Register(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                Response.Cookies.Append("useremail", user.Email, new CookieOptions
+                {
+                    Expires = DateTimeOffset.Now.AddMinutes(30),
+                    IsEssential = true,
+                    Secure = true,
+                    HttpOnly = true,
+                });
+                return RedirectToAction("Index");
+            }
+            return RedirectToAction("Registration");
         }
     }
 }
