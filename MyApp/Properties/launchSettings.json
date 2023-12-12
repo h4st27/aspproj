@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "HelloApp": {
+    "MyApp": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
