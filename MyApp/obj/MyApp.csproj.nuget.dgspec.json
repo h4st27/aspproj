@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Clemson\\source\\repos\\MyApp\\MyApp\\MyApp.csproj": {}
+    "D:\\asp\\aspproj\\MyApp\\MyApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Clemson\\source\\repos\\MyApp\\MyApp\\MyApp.csproj": {
+    "D:\\asp\\aspproj\\MyApp\\MyApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Clemson\\source\\repos\\MyApp\\MyApp\\MyApp.csproj",
+        "projectUniqueName": "D:\\asp\\aspproj\\MyApp\\MyApp.csproj",
         "projectName": "MyApp",
-        "projectPath": "C:\\Users\\Clemson\\source\\repos\\MyApp\\MyApp\\MyApp.csproj",
-        "packagesPath": "C:\\Users\\Clemson\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Clemson\\source\\repos\\MyApp\\MyApp\\obj\\",
+        "projectPath": "D:\\asp\\aspproj\\MyApp\\MyApp.csproj",
+        "packagesPath": "C:\\Users\\h4st\\.nuget\\packages\\",
+        "outputPath": "D:\\asp\\aspproj\\MyApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Clemson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\h4st\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,8 +45,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -58,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
