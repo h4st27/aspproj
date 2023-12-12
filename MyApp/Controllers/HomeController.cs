@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using MyApp.Models;
 using MyApp.ViewModels.HomeViewModles;
 using System.Globalization;
+using System.Text;
+using System.Web;
 
 namespace MyApp.Controllers
 {
@@ -13,6 +15,26 @@ namespace MyApp.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+        public ActionResult Consultion()
+        {
+            return View(new ConsultationRegistrationModel());
+        }
+        [HttpPost]
+        [HttpPost]
+        public IActionResult RegisterConsultation(ConsultationRegistrationModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                string encodedFileName = HttpUtility.UrlEncode("Consultation");
+                string fileContent = $"Повне ім'я: {model.FullName}\nПошта: {model.Email}\nДата: {model.ConsultationDate.ToString("dd:MM:yyyy")}\nПредмет: {model.Subject}";
+                byte[] bytes = Encoding.UTF8.GetBytes(fileContent);
+
+                Response.Headers.Add("Content-Disposition", $"attachment; filename={encodedFileName}.txt");
+                Response.ContentType = "text/plain";
+                return File(bytes, "text/plain");
+            }
+            return View("Consultion",model);
         }
         [HttpPost]
         public ActionResult SetCoord(string lat, string lon)

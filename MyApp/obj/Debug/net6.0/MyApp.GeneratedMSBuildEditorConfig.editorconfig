@@ -23,6 +23,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wb25lbnRzXFdlYXRoZXJcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[d:/asp/aspproj/MyApp/Views/Home/Consultion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb25zdWx0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [d:/asp/aspproj/MyApp/Views/Home/GetWeather.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRXZWF0aGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
