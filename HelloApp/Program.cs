@@ -3,8 +3,8 @@ var app = builder.Build();
 
 var myCompany = new Company
 {
-    Name = "TrackEnsure",
-    StaffAmount = 1502
+    Name = "Mappa",
+    StaffAmount = 360
 };
 //Get endpoint
 app.MapGet("/", () =>
@@ -18,7 +18,7 @@ app.MapGet("/randint", () =>
     var randomizer = new Random();
     var randomNumber = randomizer.Next(0, 101);
 
-    return "Your random number is " + randomNumber + ". Congrats!!!";
+    return "Your random number is " + randomNumber + ". Congratulations!!!";
 });
 //Middleware
 app.Use(async (context, next) =>
