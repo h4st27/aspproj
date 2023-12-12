@@ -1,4 +1,4 @@
-﻿namespace MyApp.interfaces
+﻿namespace MyApp.services.TimeOfDayService
 {
     public interface ITimeOfDayService
     {
