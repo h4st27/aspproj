@@ -8,53 +8,53 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MyApp
 build_property.RootNamespace = MyApp
-build_property.ProjectDir = d:\asp\aspproj\MyApp\
+build_property.ProjectDir = D:\asp\aspproj\MyApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = d:\asp\aspproj\MyApp
+build_property.MSBuildProjectDirectory = D:\asp\aspproj\MyApp
 build_property._RazorSourceGeneratorDebug = 
 
-[d:/asp/aspproj/MyApp/Views/Home/AddOrder.cshtml]
+[D:/asp/aspproj/MyApp/Views/Home/AddOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/asp/aspproj/MyApp/Views/Home/Components/Weather/Default.cshtml]
+[D:/asp/aspproj/MyApp/Views/Home/Components/Weather/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wb25lbnRzXFdlYXRoZXJcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/asp/aspproj/MyApp/Views/Home/Consultion.cshtml]
+[D:/asp/aspproj/MyApp/Views/Home/Consultion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb25zdWx0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/asp/aspproj/MyApp/Views/Home/GetWeather.cshtml]
+[D:/asp/aspproj/MyApp/Views/Home/GetWeather.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRXZWF0aGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/asp/aspproj/MyApp/Views/Home/Index.cshtml]
+[D:/asp/aspproj/MyApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/asp/aspproj/MyApp/Views/Home/Registration.cshtml]
+[D:/asp/aspproj/MyApp/Views/Home/Registration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/asp/aspproj/MyApp/Views/Home/ShowOrders.cshtml]
+[D:/asp/aspproj/MyApp/Views/Home/ShowOrders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG93T3JkZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/asp/aspproj/MyApp/Views/Home/_ViewImports.cshtml]
+[D:/asp/aspproj/MyApp/Views/Home/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/asp/aspproj/MyApp/Views/Shared/_Layout.cshtml]
+[D:/asp/aspproj/MyApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/asp/aspproj/MyApp/Views/_ViewImports.cshtml]
+[D:/asp/aspproj/MyApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/asp/aspproj/MyApp/Views/_ViewStart.cshtml]
+[D:/asp/aspproj/MyApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
