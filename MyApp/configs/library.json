@@ -2,7 +2,7 @@
   "library": {
     "users": [
       {
-        "name": "Yaroslav",
+        "name": "Oleksandr",
         "age": 19
       },
       {
@@ -22,28 +22,28 @@
         "age": 20
       },
       {
-        "name": "Antonio",
-        "age": 54
+        "name": "Yaroslav",
+        "age": 19
       }
     ],
     "books": [
       {
-        "name": "Clean code",
-        "author": "Robert Martin"
+        "name": "The Blade Itself",
+        "author": "Joe Abercrombie"
       },
       {
-        "name": "You don`t know JS",
-        "author": "Kyle Simpson"
+        "name": "The Lord of the Rings",
+        "author": "John Ronald Reuel Tolkien"
       },
       {
-        "name": "Gang of four",
-        "author": "Erih Gamma"
+        "name": "The Witcher",
+        "author": "Andrzej Sapkowski"
       },
       {
-        "name": "Principles, patterns and practices",
-        "author": "Robert Martin"
+        "name": "Harry Potter and the Philosopher's Stone",
+        "author": "Joanne Rowling"
       }
     ]
   },
-  "salutation": "Welcome to my library!!!"
+  "salutation": "Welcome to my library."
 }
