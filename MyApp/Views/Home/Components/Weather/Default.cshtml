@@ -1,0 +1,32 @@
+﻿@model WeatherData
+@{
+    double temperature = Model.main.temp - 273.15;
+    string country = Model.sys.country;
+    string location = Model.name;
+    int timezoze = Model.timezone/3600;
+    if (Model.name==String.Empty)
+    {
+        location = "Unnamed";
+    }
+    if (Model.sys.country == null)
+    {
+        country = "Unnamed";
+    }
+}
+<div class="container">
+    <h2>Weather Information</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <p><strong>Location:</strong> @location, @country</p>
+            <p><strong>Coordinates:</strong> Lat: @Model.coord?.lat, Lon: @Model.coord?.lon</p>
+            <p><strong>Temperature:</strong> @temperature.ToString("N2") &deg;C</p>
+            <p><strong>Weather Description:</strong> @Model.weather?[0].description</p>
+        </div>
+        <div class="col-md-6">
+            <p><strong>Humidity:</strong> @Model.main?.humidity %</p>
+            <p><strong>Pressure:</strong> @Model.main?.pressure hPa</p>
+            <p><strong>Wind Speed:</strong> @Model.wind?.speed m/s</p>
+            <p><strong>Timezone:</strong> GMT @timezoze hour(s)</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+﻿@model Coord
+@{
+    var weather = await Component.InvokeAsync("Weather", Model);
+}
+<div class="container mt-4">
+    @weather
+    <form method="post" asp-action="SetCoord">
+        <div class="form-group">
+            <label asp-for="lat">Latitude:</label>
+            <input asp-for="lat" type="number" class="form-control" id="lat" name="lat" min="-90" max="90" step="any" placeholder="Enter latitude" value="@Model.lat" required>
+        </div>
+        <div class="form-group">
+            <label asp-for="lon">Longitude:</label>
+            <input asp-for="lon" type="number" class="form-control" id="lon" name="lon" min="-180" max="180" step="any" placeholder="Enter longitude" value="@Model.lon" required>
+        </div>
+        <button style ="width:100%;margin-top: 15px" type="submit" class="btn btn-primary" id="confirmButton">Confirm</button>
+    </form>
+</div>

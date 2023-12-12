@@ -9,11 +9,16 @@
             <select asp-for=ShowStyle class="form-control" id="viewSelect">
                 <option value="@ShowStyles.List">List View</option>
                 <option value="@ShowStyles.Table">Table View</option>
+                <option value="@ShowStyles.Row">Row View</option>
             </select>
 
         </div>
         <button style="width:100%;margin-top: 15px" type="submit" class="btn btn-primary btn-block">Change view</button>
     </form>
+    @if (Model.ShowStyle == ShowStyles.Row)
+    {
+        @await Component.InvokeAsync("Table",Model.Orders)
+    }
     @if (Model.ShowStyle == ShowStyles.List)
     {
         <div id="productsList" class="list-view">
@@ -32,7 +37,7 @@
             </ul>
         </div>
     }
-    else
+    @if (Model.ShowStyle == ShowStyles.Table)
     {
     <div id="productsTable" class="table-view">
         <table class="table table-striped">
