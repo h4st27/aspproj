@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Clemson\\source\\repos\\MyApp\\MyApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MyApp.bundle.scp.css",
-      "PackagePath": "staticwebassets\\MyApp.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\Clemson\\source\\repos\\MyApp\\MyApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

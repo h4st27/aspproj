@@ -22,6 +22,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Registration}/{id?}");
+    pattern: "{controller=File}/{action=DownloadFile}/{id?}");
 
 app.Run();

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xJOR1dAQNwLsMgRLCb+7XWFuvZGdmydo9/tBjJpz3pA=",
+  "Hash": "2eiu/dbIqSb1hhcK1YBNInkQ/8tvrDj3bJlGopzkB4g=",
   "Source": "MyApp",
   "BasePath": "_content/MyApp",
   "Mode": "Default",
@@ -16,40 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Users\\Clemson\\source\\repos\\MyApp\\MyApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MyApp.styles.css",
-      "SourceId": "MyApp",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Clemson\\source\\repos\\MyApp\\MyApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/MyApp",
-      "RelativePath": "MyApp.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Clemson\\source\\repos\\MyApp\\MyApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MyApp.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\Clemson\\source\\repos\\MyApp\\MyApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MyApp.bundle.scp.css",
-      "SourceId": "MyApp",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Clemson\\source\\repos\\MyApp\\MyApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/MyApp",
-      "RelativePath": "MyApp.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Clemson\\source\\repos\\MyApp\\MyApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MyApp.bundle.scp.css"
-    },
     {
       "Identity": "C:\\Users\\Clemson\\source\\repos\\MyApp\\MyApp\\wwwroot\\css\\site.css",
       "SourceId": "MyApp",
