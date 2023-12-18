@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model lr12.Models.UserModel
+<div class="text-center">
+    <h1>Edit</h1>
+    <form class="container-md row" asp-action="edit" asp-controller="Home" asp-route-id="@Model.Id">
+        <div class="input-group mb-2">
+            <label class="input-group-text" asp-for="Name">Name</label>
+            <input class="form-control" type="text" asp-for="Name" required />
+        </div>
+        <div class="input-group mb-2">
+            <label class="input-group-text" asp-for="Surname">Surname</label>
+            <input class="form-control" type="text" asp-for="Surname" required />
+        </div>
+        <div class="input-group mb-2">
+            <label class="input-group-text" asp-for="Age">Age</label>
+            <input class="form-control" type="number" asp-for="Age" required />
+        </div>
+        <div class="d-flex justify-content-center">
+            <input type="submit" class="btn btn-primary" value="Save" />
+        </div>
+    </form>
+</div>

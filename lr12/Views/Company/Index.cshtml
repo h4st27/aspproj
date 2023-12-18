@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Company Page";
+}
+@model IEnumerable<lr12.Models.CompanyModel>
+<div>
+    <a asp-controller="Company" class="btn btn-success" asp-action="Create" method="post">
+        Create
+    </a>
+</div>
+<div class="text-center">
+
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Workers</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th></th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Workers</td>
+                <td>+@item.Phone</td>
+                <td>@item.Email</td>
+                <td>
+                    <a asp-controller="Company" class="btn btn-info" asp-action="Edit" method="post" asp-route-id="@item.Id">
+                        Edit
+                    </a>
+                </td>
+                <td>
+                    <form asp-controller="Company" asp-action="Delete" method="Post" asp-route-id="@item.Id">
+                        <input type="submit" class="btn btn-danger" value="Delete" />
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
